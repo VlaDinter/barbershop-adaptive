@@ -1,0 +1,151 @@
+﻿.news {
+  padding: 35px 0 30px;
+
+  border-bottom: 1px solid #e5ddd5;
+
+  background-color: #f8f5f2;
+}
+
+.news__wrapper {
+  margin: 0 20px;
+}
+
+.news__title {
+  margin: 0;
+  padding-bottom: 15px;
+
+  color: #000000;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.news__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.news__item {
+  padding: 25px 0;
+
+  display: flex;
+
+  border-bottom: 1px solid #e5ddd5;
+
+  &:nth-child(2) {
+    border-bottom: none;
+  }
+
+  &:nth-child(n + 3) {
+    display: none;
+  }
+}
+
+.news__date {
+  width: 50px;
+  height: 60px;
+
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: center;
+
+  flex-shrink: 0;
+
+  background-color: #000000;
+  background-image: url("../img/triangles.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
+
+.news__day {
+  height: 20px;
+  padding: 10px 0 0;
+
+  font-size: 30px;
+  font-weight: bold;
+
+  display: block;
+}
+
+.news__text {
+  margin: 0 0 0 20px;
+
+  color: #111010;
+}
+
+@media (min-width: @tablet-width) {
+  .news {
+    padding: 45px 0 40px;
+  }
+
+  .news__wrapper {
+    position: relative;
+
+    margin: 0 65px;
+  }
+
+  .news__title {
+    padding-bottom: 10px;
+
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .news__list {
+    display: flex;
+  }
+
+  .news__item {
+    width: 280px;
+
+    padding: 55px 0 0;
+
+    border-bottom: none;
+
+    flex-grow: 1;
+
+    &:nth-child(n + 2) {
+      margin-left: 40px;
+    }
+
+    &:last-child {
+      margin-right: 45px;
+    }
+  }
+
+  .news__to-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .news {
+    padding: 55px 0 45px;
+  }
+
+  .news__wrapper {
+    margin: 0 120px;
+  }
+
+  .news__title {
+    margin-left: 70px;
+  }
+
+  .news__item {
+    &:nth-child(3) {
+      display: flex;
+    }
+
+    &:last-child {
+      margin-right: 50px;
+    }
+  }
+}

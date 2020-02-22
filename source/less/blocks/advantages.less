@@ -1,13 +1,15 @@
 .advantages {
-  width: auto;
-}
+  padding: 40px 0 45px;
 
-.advantages__wrapper {
   background-color: #242424;
   background-image: url("../img/triangles.svg");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: cover;
+}
+
+.advantages__wrapper {
+  margin: 0 45px;
 }
 
 .advantages__list {
@@ -18,43 +20,118 @@
 }
 
 .advantages__item {
-  margin: 30px 0;
+  padding-bottom: 20px;
+
+  text-align: center;
 }
 
-.advantages__item--fast__icon {
-  text-align: right;
-  background-color: red;
+.advantages__item-icon {
+  width: 125px;
+  height: 125px;
 }
 
 .advantages__title {
   margin: 0;
-  margin-bottom: 25px;
+  padding: 30px 0 20px;
 
   font-size: 30px;
   line-height: 30px;
   font-weight: bold;
-  text-transform: uppercase;
   text-align: center;
 }
 
 .advantages__description {
-  margin: 0 10%;
+  margin: 0;
 
   font-size: 20px;
-  line-height: 27px;
   text-align: center;
 }
 
 .advantages__toggles {
-  display: fle;
+  display: none;
 }
 
-.slider__toggle {
-  display: block;
-  width: 5px;
-  height: 5px;
-  margin: 10px 10px;
+@media (min-width: @tablet-width) {
+  .advantages {
+    padding: 0 0 50px;
 
-  border: 2px solid #323131;
-  transform: rotate(45deg);
+    background-color: #353535;
+  }
+
+  .advantages__wrapper {
+    margin: 0 100px;
+  }
+
+  .advantages__item {
+    min-height: 125px;
+
+    padding: 40px 0;
+
+    border-bottom: 1px solid #4a4a4a;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .advantages__item-icon {
+    float: left;
+  }
+
+  .advantages__title {
+    margin-left: 155px;
+    padding: 0 0 20px;
+
+    text-align: left;
+  }
+
+  .advantages__description {
+    margin-left: 155px;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    padding: 70px 0 110px;
+  }
+
+  .advantages__wrapper {
+    margin: 0 110px;
+  }
+
+  .advantages__list {
+    display: flex;
+  }
+
+  .advantages__item {
+    min-height: 0;
+
+    padding: 0;
+
+    border-right: 1px solid #4a4a4a;
+    border-bottom: none;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .advantages__item-icon {
+    float: none;
+  }
+
+  .advantages__title {
+    margin-left: 0;
+    padding: 35px 0 20px;
+
+    text-align: center;
+  }
+
+  .advantages__description {
+    margin: 0 50px;
+
+    text-align: center;
+  }
 }

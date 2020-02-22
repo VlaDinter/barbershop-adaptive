@@ -35,6 +35,47 @@ img {
   height: auto;
 }
 
+a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.button {
+  width: 160px;
+  height: 35px;
+
+  padding: 15px 0 0;
+
+  color: #000000;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+
+  border: 1px solid #e5ddd5;
+
+  display: block;
+
+  &:hover {
+    border-color: #d5c9bd;
+  }
+
+  &:active {
+    color: #958c84;
+
+    border-color: #d5c9bd;
+
+    background-color: #d5c9bd;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .button {
+    width: auto;
+  }
+}
+
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
 
